@@ -1,0 +1,131 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    min-width: 440px;
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.2;
+    font-family: "Work Sans", serif;
+    background: url(./assets/images/background-pattern-desktop.svg) no-repeat;
+    background-color: var(--Light-pink);
+    background-position: top;
+    background-size: 100%;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.faq-accordion {
+    background-color: var(--White);
+    color: var(--Grayish-purple);
+    margin: auto;
+    padding: 40px 15px;
+    width: 40%;
+    border-radius: 1rem;
+    box-shadow: 0 30px 100px -50px black;
+    padding: 30px;
+}
+
+.faq-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.faq-header h1 {
+    color: var(--Dark-purple);
+    font-size: 45px;
+}
+
+.faq-dropdown {
+    border-bottom: .5px solid #ccc;
+}
+
+.faq-dropdown-header {
+    font-size: 10px;
+    font-weight: 300;
+    padding: 18px 0;
+    margin: 12px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    color: var(--Dark-purple);
+}
+
+.faq-dropdown-header:hover{
+    color: #AD28EB;
+}
+
+.faq-dropdown-body {
+    font-size: 14px;
+    line-height: 1.5rem;
+    padding: 0 30px 0 0;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.faq-icon {
+    border: 0px;
+    width: 30px;
+    height: 30px;
+    background: url(./assets/images/icon-plus.svg);
+    background-size: cover;
+    background-color: inherit;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.faq-dropdown-body.open {
+    display: block;
+}
+
+.faq-icon.open {
+    background: url(./assets/images/icon-minus.svg);
+    transition: 0.3s ease;
+}
+
+footer { 
+    margin-bottom: 10px;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+footer a { 
+    color: var(--Dark-purple); 
+}
+
+@media (max-width:760px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    main {
+        background: url(./assets/images/background-pattern-mobile.svg) no-repeat;
+        background-size: 100%;
+        min-height: 100svh;
+    }
+
+    .faq-accordion {
+        margin-top: 150px;
+        min-height: auto;
+        width: 90%;
+    }
+
+    footer {
+        margin-top: 40px;
+    }
+}
